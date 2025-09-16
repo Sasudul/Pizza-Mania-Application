@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">PizzaManiaApplication</string>
+    <string name="app_name">Pizza Mania</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="footer_text">© 2025 Pizza Mania – Taste the Difference</string>
+    <string name="google_maps_key">AIzaSyAdsvZ2PMYO5KpHg4rr0oYJg4UnA2S633Y</string>
 </resources>
