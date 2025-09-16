@@ -12,7 +12,7 @@ public class Order {
     public Order() {}
 
     public Order(int orderId, int userId, int branchId, String items,
-                 double totalPrice, String currentStatus, String statusHistory, String estimatedDelivery) {
+                 double totalPrice, String currentStatus, String estimatedDelivery) {
         this.orderId = orderId;
         this.userId = userId;
         this.branchId = branchId;
