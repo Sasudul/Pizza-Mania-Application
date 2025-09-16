@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUsActivity">
+
+    <!-- Background wood image -->
+    <ImageView
+        android:id="@+id/bgWood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wood_pizza" />
+
+    <!-- translucent overlay to darken the background so text is readable -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" /> <!-- 50% black -->
+
+    <!-- Top red app bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/header_gradient"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_gravity="top">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/btnUser"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/chef_logo_white"
+            android:contentDescription="logo" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/logo"
+            android:layout_marginStart="8dp"
+            android:text="Pizza Mania"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Right-side icons -->
+        <LinearLayout
+            android:id="@+id/rightIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/btnCall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_call"
+                android:contentDescription="call"
+             />
+
+            <ImageButton
+                android:id="@+id/btnCart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_cart"
+                android:contentDescription="cart"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="user"
+            android:src="@drawable/ic_back_arrow" />
+    </RelativeLayout>
+
+    <!-- Content area -->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="120dp">  <!-- bottom padding so pizza image doesn't overlap -->
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Centered title -->
+            <TextView
+                android:id="@+id/titleContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Blurb paragraph -->
+            <TextView
+                android:id="@+id/blurb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We'd love to hear from you! Whether you have a question, feedback, or just want to order your favorite pizza, reach out anytime."
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:lineSpacingExtra="2dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Contact card - semi-transparent box -->
+            <LinearLayout
+                android:id="@+id/contactCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#50FFFFFF"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="6dp"
+                android:clipToPadding="false"
+                android:layout_gravity="center">
+
+                <!-- Pizza Mania line -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_cart"
+
+                        android:contentDescription="bullet" />
+
+                    <TextView
+                        android:id="@+id/companyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Pizza Mania"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Location -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_add_image"
+                        android:contentDescription="location" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Location: 123 Main Street, Colombo, Sri Lanka"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Hotline -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_call"
+                        android:tint="#FFFFFF"
+                        android:contentDescription="phone" />
+
+                    <TextView
+                        android:id="@+id/hotline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Hotline: +94 77 123 4567"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Support -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_call"
+                        android:contentDescription="support" />
+
+                    <TextView
+                        android:id="@+id/support"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Support: +94 11 987 6543"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_back_arrow"
+                        android:contentDescription="email" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Email: support@pizzamania.lk"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Opening hours -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="6dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_back_arrow"
+                        android:contentDescription="hours" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  Opening Hours:"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  • Mon - Fri: 11:00 AM - 11:00 PM\n  • Sat - Sun: 10:00 AM - 12:00 Midnight"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:lineSpacingExtra="1.5dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Footer copyright small -->
+            \
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
