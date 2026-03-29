@@ -1,27 +1,82 @@
-Pizza Mania - Mobile Ordering Application
+# Pizza Mania - Mobile Ordering Application
 
-Overview
-Pizza Mania is a mobile application developed using Android Studio (Java + XML) and SQLite Database. The project simulates a complete pizza ordering system with role-based functionality for
-customer and administrators.It has been designed with a focus on usability, efficient order management, and real-world delivery assignment integration.
+Pizza Mania is an Android-based pizza ordering application built with **Java**, **XML**, and **SQLite**.  
+It provides a complete mobile ordering experience with customer authentication, cart management, location-based delivery support, and admin/staff management features.
 
-Core Features 
+## Overview
 
-User Authentication & Session Management( Secure login with persistent session handling).
-Cart Management (Add, update, and remove pizzas from the shopping cart).
-Dynamic Menus ( Menu changes dynamically based on branch location Colombo, Galle, Matara).
-Image-Driven UI (Pizza items displayed with images, names, descriptions, and prices.
-Branch-Aware Ordering (Each branch has its own unique menu).
-SQLite Local Database (Handles persistent data storage for menu, users, and cart).
-Mobile-Responsive UI (Designed with modern, minimal UI for easy navigation).
+Pizza Mania is designed to simulate a real-world pizza ordering system.  
+The application supports different user roles and provides branch-aware menu handling, order management, and local data persistence using SQLite.
 
+## Features
 
-Database Tables Implemented
- **Users** – Stores customer details.  
- **Staff** – Stores staff information including delivery personnel.  
- **Branches** – Manages branch-level details.  
- **Menu** – Contains pizza items, descriptions, prices, categories.  
- **Orders** – Stores customer orders with status and pricing.  
+### Customer Features
+- User registration and login
+- Secure session management using SharedPreferences
+- Browse branch-based pizza menus
+- Add, update, and remove items from cart
+- Checkout and order placement
+- View order history
+- Save and manage delivery address
+- Location detection using GPS/Fused Location Provider
+- Profile management with image upload
 
+### Admin / Staff Features
+- Admin dashboard
+- Add employee/staff details
+- View staff records
+- Manage branches and menu-related data
+- Handle delivery and order assignment workflows
 
-#Sasundul Wanasingha
-Second-Year Software Engineering Student @ NIBM Colombo
+### Application Highlights
+- Built with Android Studio
+- Developed in Java with XML layouts
+- Uses SQLite for local storage
+- Role-based application flow
+- Modern and mobile-friendly user interface
+- Branch-aware menus for different locations
+
+## Tech Stack
+
+- **Language:** Java
+- **UI:** XML
+- **Database:** SQLite
+- **Platform:** Android
+- **Tools:** Android Studio, Gradle
+
+  
+## Database Tables
+
+The application uses SQLite tables such as:
+
+- **Users** - Stores customer details
+- **Staff** - Stores staff and delivery personnel data
+- **Branches** - Stores branch information
+- **Menu** - Stores pizza items, descriptions, categories, and prices
+- **Orders** - Stores order details, status, and pricing
+
+## Installation
+
+### Prerequisites
+- Android Studio
+- Android SDK
+- Java JDK
+- An Android device or emulator
+
+### Steps to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sasudul/Pizza-Mania-Application.git
+   ```
+2. Open the project in Android Studio.
+3. Sync Gradle dependencies.
+4. Run the app on an emulator or connected Android device.
+
+## Contributors
+
+Contributors of this project are:
+
+1. **Sasudul** (`sasudul`)
+2. **Sanugi** (`sanugi06`)
+3. **Ishara** (`IsharaLakshan2002`)
+4. **Branjana** (`sureshbranjana`)
